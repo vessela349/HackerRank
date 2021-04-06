@@ -10,6 +10,9 @@ import java.util.regex.*;
 
 public class Solution {
 
+    static void printRatio(int n, int arrSize){
+        System.out.println(String.format("%.6f", (double)n/arrSize));
+    }
     // Complete the plusMinus function below.
     static void plusMinus(int[] arr) {
         int positive = 0;
@@ -27,9 +30,9 @@ public class Solution {
                 zero++;
             }
         }
-        System.out.println(String.format("%.6f", (double)positive/arrSize));
-        System.out.println(String.format("%.6f", (double)negative/arrSize));
-        System.out.println(String.format("%.6f", (double)zero/arrSize));
+        printRatio(positive, arrSize);
+        printRatio(negative, arrSize);
+        printRatio(zero, arrSize);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
